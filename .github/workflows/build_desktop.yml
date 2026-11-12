@@ -6,6 +6,8 @@ on:
 jobs:
   build-macos:
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - name: Setup Flutter
@@ -37,6 +39,8 @@ jobs:
 
   build-windows:
     runs-on: windows-latest
+    strategy:
+      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - name: Setup Flutter
